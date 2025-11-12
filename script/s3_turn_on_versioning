@@ -1,0 +1,16 @@
+#!/bin/bash
+################################ 3. Configure S3 with versioning to be able to revert back to any version of file ##############
+
+# Get the directory of the current script
+SCRIPT_DIR="$(dirname "$0")"
+
+# Source a file named 'variables.sh' in the same directory
+source "${SCRIPT_DIR}/variables.sh"
+
+for bucket_name in "${BUCKET_NAME_LIST[@]}"; do 
+    aws s3api put-bucket-versioning \
+    --bucket $bucket_name \
+    --versioning-configuration Status=Suspended 
+done
+#####################################################################
+

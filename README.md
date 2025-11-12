@@ -98,9 +98,12 @@ crontab -e
 ```
 
 ### 3- Configure S3 with versioning to be able to revert back to any version of file
-* TBD
+* Run script to turn on version on buckets created on step 1 above
 ```
-TBD
+chmod +x script/s3_turn_on_versioning.sh
+```
+```
+. script/s3_turn_on_versioning.sh
 ``` 
 
 ### 4- Create S3 livecycle policies to move older files to cheaper storage after 30 days
