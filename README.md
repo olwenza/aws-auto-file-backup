@@ -49,9 +49,27 @@ awscli configure
 
 ### Executing program
 ### 1- Create S3 buckets for different data types to be stored (Documents, photos, videos)
-* TBD
+**- Using AWS CLI**
 ```
-TBD
+. script/setup.sh
+```
+
+**- Or using Terraform**
+```
+cd terraform
+```
+```
+terraform init
+```
+```
+terraform plan
+```
+```
+terraform apply
+```
+**- Destroy created buckets** 
+```
+terraform destroy
 ```
 
 ### 2- Write script to identify important files and auto upload to S3 nightly at 2:00am
