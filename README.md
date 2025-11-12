@@ -116,10 +116,18 @@ chmod +x script/s3_set_policy.sh
 ``` 
 
 ### 5- Send SNS email confirmation to notify users of backup post completion
-* TBD
+* Run script to send SNS notification
+* First create sns topic and get the ARN from output of the following command
 ```
-TBD
-``` 
+aws sns create-topic --name FileBackupCompletedTopic
+```
+* Update earn in script/s3_send_email.sh with ARN return from previous step and run script
+```
+chmod +x script/s3_send_email.sh
+```
+```
+. script/s3_send_email.sh
+```
 
 ## Authors
 
