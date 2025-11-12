@@ -107,9 +107,12 @@ chmod +x script/s3_turn_on_versioning.sh
 ``` 
 
 ### 4- Create S3 livecycle policies to move older files to cheaper storage after 30 days
-* TBD
+* Run script to set livecycle policies on buckets created on step 1 above
 ```
-TBD
+chmod +x script/s3_set_policy.sh
+```
+```
+. script/s3_set_policy.sh
 ``` 
 
 ### 5- Send SNS email confirmation to notify users of backup post completion
