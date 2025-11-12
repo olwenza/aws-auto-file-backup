@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Editor files and directories
+.vscode/
+.idea/
+*.sublime-workspace
+*.swp
+*~
+# macOS files
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Configuration files
+.env
+config.local.py
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Test reports
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Miscellaneous
+build/
+dist/
+*.egg
+*.whl
+response.json
