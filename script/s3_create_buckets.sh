@@ -1,8 +1,11 @@
 
 #!/bin/bash
 ############## 1- Create S3 bucket #####################################
-# Define your bucket name and region
-BUCKET_NAME_LIST=( "bak-doc-ivan-augustino" "bak-image-ivan-augustino" "bak-video-ivan-augustino" )
+# Get the directory of the current script
+SCRIPT_DIR="$(dirname "$0")"
+
+# Source a file named 'variables.sh' in the same directory
+source "${SCRIPT_DIR}/variables.sh"
 
 REGION="us-east-1"
 
